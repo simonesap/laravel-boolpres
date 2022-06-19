@@ -7,7 +7,7 @@
 
         <div v-if="posts.length">
 
-            <!-- <Pagination :pagination="pagination"/> -->
+            <Pagination :pagination="pagination" @on-page-change="getPosts" />
 
             <div class="card text-center" v-for="post in posts" :key="post.id">
                 <div class="card-header">
@@ -20,7 +20,7 @@
                         </span>
                     </p>
                     <p class="card-text">{{post.content}}</p>
-                    <router-link :to="{name: 'post-show-page'}" class="btn btn-primary">View</router-link>
+                    <!-- <router-link :to="{name: 'post-show-page'}" class="btn btn-primary">View</router-link> -->
                     <!-- {params: $post.id} -->
                 </div>
                 <div class="card-footer text-muted">

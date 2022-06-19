@@ -4,12 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Post;
-use App\Models\Tag;
-use App\Models\Category;
-use App\User;
 
-class PostController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,11 +14,12 @@ class PostController extends Controller
      */
     public function index()
     {
-        //$posts = Post::orderBy('updates_at', 'DESC')->with('Category','tags')->limit(5)->get();
-        $posts = Post::orderBy('updated_at', 'DESC')->with('Category','tags')->paginate(5);
-        //$posts = Post::all();
 
-        return response()->json( compact( 'posts'));
+        $users = Auth::user();
+
+        // if ( $users ) $user = $request->all();
+
+        return response()->json( );
     }
 
     /**
@@ -54,9 +51,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $post = Post::with('Category','tags')->find($id);
-
-        return response()->json( $post);
+        //
     }
 
     /**

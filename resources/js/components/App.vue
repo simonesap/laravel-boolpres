@@ -2,17 +2,22 @@
 
     <div>
 
-        <Header/>
+        <body>
+                <Header/>
 
-        <main>
-            <div class="container">
-                <PostList/>
-                <!-- <router-view></router-view> -->
-            </div>
+                <main>
+                    <div class="container">
+                        <!-- <PostList/> -->
+                        <router-view></router-view>
+                    </div>
 
 
-        </main>
+                </main>
+
+        </body>
+
     </div>
+
 </template>
 
 <script>
@@ -29,3 +34,13 @@ import PostList from './posts/PostList.vue';
     }
 
 </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+
+    body {
+        font-family: 'Joan', serif;
+    }
+
+
+</style>
