@@ -5,13 +5,20 @@
             <Loader/>
         </div>
 
+        <div style="width: 300px; margin: 0 auto;">
+            <h2>Your posts</h2>
+        </div>
+
         <div v-if="posts.length">
 
             <Pagination :pagination="pagination" @on-page-change="getPosts" />
 
-            <div class="card text-center" v-for="post in posts" :key="post.id">
+            <div class="card text-center m-3" v-for="post in posts" :key="post.id">
                 <div class="card-header">
                     {{post.title}} - Category: {{post.category.label}}
+                </div>
+                <div>
+                    <img :src="post.image" alt="">
                 </div>
                 <div class="card-body">
                     <p class="card-title">
@@ -35,6 +42,14 @@
                     {{post.created_at[8]}}
                     {{post.created_at[9]}}
                 </div>
+
+                <router-link class="text-white btn btn-primary"
+                             style="width: 70px; margin: 0 auto;"
+                             :to="{name: 'post-show-page', params: { slug: post.slug} }">
+
+                             View
+                </router-link>
+
             </div>
         </div>
         <p v-else>Non ci sono post</p>
@@ -65,8 +80,9 @@ import Pagination from '../Pagination.vue';
         },
 
         methods: {
-                getPosts(){
-                    axios.get('http://127.0.0.1:8000/api/posts')
+                getPosts(page = 1){
+                    // axios.get(`http://127.0.0.1:8000/api/posts?page=${page}`)
+                    axios.get('http://127.0.0.1:8000/api/posts?page=' + page)
                     .then( (res) => {
                         console.log(res.data.posts);
 

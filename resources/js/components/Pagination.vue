@@ -4,7 +4,7 @@
         <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <li v-if="pagination.currentPage > 1" class="page-item" @click="$emit( 'on-page-change', pagination.currentPage - 1 )">
-                    <span class="page-link" >Previous</span>
+                    <span role="button" class="page-link" >Previous</span>
                 </li>
 
                 <li
