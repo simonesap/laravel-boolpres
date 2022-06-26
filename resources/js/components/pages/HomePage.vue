@@ -1,4 +1,4 @@
-<!--<template>
+<template>
 
     <div>
         <PostList/>
@@ -9,11 +9,12 @@
 <script>
 import PostList from '../posts/PostList.vue';
 
-export default {
-    name: HomePage,
-    components: {
-        PostList,
-    }
-}
+    export default {
+        name: 'HomePage',
 
-</script>-->
+        components: {
+            PostList,
+        }
+    }
+
+</script>

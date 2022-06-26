@@ -5,3 +5,5 @@
  */
 
 require('./bootstrap');
+
+// Vue.config.productionTip = false

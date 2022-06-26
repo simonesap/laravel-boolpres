@@ -4,7 +4,7 @@
             <div>
                 <img :src="require('../../../public/img/logo.png')" alt="">
             </div>
-            <router-link class="navbar-brand m-1 w_custom-2" to="/">Boolpress.com</router-link>
+            <!-- <router-link class="navbar-brand m-1 w_custom-2" to="/">Boolpress.com</router-link> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -12,10 +12,10 @@
                 <div>
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <router-link class="nav-link m-1 w_custom-2" to="{name: 'home'}">Home <span class="sr-only">(current)</span></router-link>
+                            <router-link class="nav-link m-1 w_custom-2" to="/">Boolpress.com </router-link>
                         </li>
                         <li class="nav-item active">
-                            <router-link class="nav-link m-1 w_custom-2" to="{name: 'contact'}">Contact</router-link>
+                            <router-link class="nav-link m-1 w_custom-2" to="/contacts">Contacts</router-link>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link m-1 w_custom-2" href="/admin/posts">Bacheca</a>

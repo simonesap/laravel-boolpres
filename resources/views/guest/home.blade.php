@@ -55,7 +55,7 @@
         </div>
         {{-- Richiamare Vue --}}
         <script src=" {{asset('js/front.js')}}"></script>
-        {{-- Richiamare Vil js di Bootstrap --}}
+        {{-- Richiamare il js di Bootstrap --}}
         <script src=" {{asset('js/app.js')}}"></script>
     </body>
 </html>
